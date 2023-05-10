@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 
 """Defines the BaseModel"""
+#Model may be wrong pr out of version
+# model affects the storage.save and storage.new function 
 
-import models
+import base_model as models
 
 from uuid import uuid4
 
