@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 """Defines the HBnB console."""
-
 import cmd
 
 import re
@@ -14,16 +13,13 @@ from models.base_model import BaseModel
 
 from models.user import User
 
-from models.city  import City
+from models.city import City
 
 from models.place import Place
 
 from models.amenity import Amenity
 
 from models.review import Review
-
-
-
 
 
 def parse(arg):
@@ -59,9 +55,6 @@ def parse(arg):
         return retl
 
 
-
-
-
 class HBNBCommand(cmd.Cmd):
 
     """Defines the HolbertonBnB command interpreter.
@@ -72,12 +65,8 @@ class HBNBCommand(cmd.Cmd):
 
     """
 
-
-
     prompt = "(hbnb) "
-
     __classes = {
-
         "BaseModel",
 
         "User",
@@ -94,15 +83,11 @@ class HBNBCommand(cmd.Cmd):
 
     }
 
-
-
     def emptyline(self):
 
         """Do nothing upon receiving an empty line."""
 
         pass
-
-
 
     def default(self, arg):
 
@@ -144,15 +129,11 @@ class HBNBCommand(cmd.Cmd):
 
         return False
 
-
-
     def do_quit(self, arg):
 
         """Quit command to exit the program."""
 
         return True
-
-
 
     def do_EOF(self, arg):
 
@@ -161,8 +142,6 @@ class HBNBCommand(cmd.Cmd):
         print("")
 
         return True
-
-
 
     def do_create(self, arg):
 
@@ -187,8 +166,6 @@ class HBNBCommand(cmd.Cmd):
             print(eval(argl[0])().id)
 
             storage.save()
-
-
 
     def do_show(self, arg):
 
@@ -222,8 +199,6 @@ class HBNBCommand(cmd.Cmd):
 
             print(objdict["{}.{}".format(argl[0], argl[1])])
 
-
-
     def do_destroy(self, arg):
 
         """Usage: destroy <class> <id> or <class>.destroy(<id>)
@@ -256,8 +231,6 @@ class HBNBCommand(cmd.Cmd):
 
             storage.save()
 
-
-
     def do_all(self, arg):
 
         """Usage: all or all <class> or <class>.all()
@@ -288,8 +261,6 @@ class HBNBCommand(cmd.Cmd):
 
             print(objl)
 
-
-
     def do_count(self, arg):
 
         """Usage: count <class> or <class>.count()
@@ -308,8 +279,6 @@ class HBNBCommand(cmd.Cmd):
 
         print(count)
 
-
-
     def do_update(self, arg):
 
         """Usage: update <class> <id> <attribute_name> <attribute_value> or
@@ -325,8 +294,6 @@ class HBNBCommand(cmd.Cmd):
         argl = parse(arg)
 
         objdict = storage.all()
-
-
 
         if len(argl) == 0:
 
@@ -370,8 +337,6 @@ class HBNBCommand(cmd.Cmd):
 
                 return False
 
-
-
         if len(argl) == 4:
 
             obj = objdict["{}.{}".format(argl[0], argl[1])]
@@ -405,9 +370,6 @@ class HBNBCommand(cmd.Cmd):
                     obj.__dict__[k] = v
 
         storage.save()
-
-
-
 
 
 if __name__ == "__main__":
