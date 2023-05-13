@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 
 """Defines the BaseModel"""
-#Model may be wrong pr out of version
-# model affects the storage.save and storage.new function 
 
-import base_model as models
+import models
 
 from uuid import uuid4
 
@@ -95,3 +93,9 @@ class BaseModel:
         instance_dict["__class__"] = self.__class__.__name__
 
         return instance_dict
+
+
+
+
+
+
