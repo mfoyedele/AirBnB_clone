@@ -20,8 +20,6 @@ Unittest classes:
 
     TestHBNBCommand_update
 
-"""
-
 import os
 
 import sys
