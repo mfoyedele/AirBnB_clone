@@ -263,7 +263,7 @@ e952b772-80a5-41e9-b728-6bc4dc5c21b4
 ```
 ## Authors
 <details>
-    <summary>Musa Funso Oyedele<</summary>
+    <summary>Musa Funso Oyedele</summary>
     <ul>
     <li><a href="https://www.github.com/mfoyedele">Github</a></li>
     <li><a href="https://www.twitter.com/realfunso">Twitter</a></li>
@@ -277,4 +277,3 @@ e952b772-80a5-41e9-b728-6bc4dc5c21b4
     <li><a href="mailto:momohabdulsalam38@gmail.com">e-mail</a></li>
     </ul>
 </details>
-
